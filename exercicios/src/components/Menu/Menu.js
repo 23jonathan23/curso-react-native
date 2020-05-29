@@ -10,6 +10,9 @@ import Plataformas from '../Plataformas/Plataformas';
 import ValidarProps from '../ValidarProps/ValidarProps';
 import Evento from '../Evento/Evento';
 import { Avo } from '../ComunicacaoDireta/ComunicacaoDireta';
+import TextoSincronizado from '../ComunicacaoIndireta/ComunicacaoIndireta';
+import ListaFlex from '../ListaAlunos/ListaAlunos';
+import Flex from '../Flex/Flex';
 
 const Drawer = createDrawerNavigator();
 
@@ -73,6 +76,21 @@ export default props => {
           name="ComunicacaoDireta"
           component={ComunicacaoDiretaScreen}
           options={{ drawerLabel: 'Comunicaçao Direta' }}
+        />
+        <Drawer.Screen
+          name="ComunicacaoIndireta"
+          component={TextoSincronizado}
+          options={{ drawerLabel: 'Comunicaçao Indireta' }}
+        />
+        <Drawer.Screen
+          name="ListaFlex"
+          component={ListaFlex}
+          options={{ drawerLabel: 'Lista Flex' }}
+        />
+        <Drawer.Screen
+          name="Flex"
+          component={Flex}
+          options={{ drawerLabel: 'Flex' }}
         />
       </Drawer.Navigator>
     </NavigationContainer>
